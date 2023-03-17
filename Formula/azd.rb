@@ -15,6 +15,8 @@ class Azd < Formula
         EOS
         on_arm do
             s += <<~EOS
+
+
                 The #{desc} is built for Intel macOS and so requires Rosetta 2 to be installed.
                 You can install Rosetta 2 with:
                   softwareupdate --install-rosetta
