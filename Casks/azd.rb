@@ -6,7 +6,7 @@ cask "azd" do
     version "0.7.0-beta.1"
     sha256 "ff1736950c02d67d30a0a9b714843a6e0d5dd936c1e071320fdd6335d5b63666"
 
-    binary "azd-darwin-amd64", target: "azd"
+    binary "#{staged_path}/azd-darwin-amd64", target: "azd"
 
     caveats do
         requires_rosetta
