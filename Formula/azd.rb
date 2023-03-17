@@ -6,6 +6,10 @@ class Azd < Formula
   sha256 "ff1736950c02d67d30a0a9b714843a6e0d5dd936c1e071320fdd6335d5b63666"
   license "MIT"
 
+  def install
+    bin.install "azd-darwin-amd64" => "azd"
+  end
+
   def caveats
     caveat = <<~EOS
       The #{desc} collects usage data and sends that usage data to Microsoft in order to help us improve your experience.
@@ -23,10 +27,6 @@ class Azd < Formula
       EOS
     end
     caveat
-  end
-
-  def install
-    bin.install "azd-darwin-amd64" => "azd"
   end
 
   test do
