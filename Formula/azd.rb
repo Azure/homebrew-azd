@@ -7,14 +7,14 @@ class Azd < Formula
     license "MIT"
 
     def caveats
-        s = <<~EOS
+        caveat = <<~EOS
             The #{desc} collects usage data and sends that usage data to Microsoft in order to help us improve your experience.
             You can opt-out of telemetry by setting the AZURE_DEV_COLLECT_TELEMETRY environment variable to 'no' in the shell you use.
             
             Read more about #{desc} telemetry: https://github.com/Azure/azure-dev#data-collection
         EOS
         on_arm do
-            s += <<~EOS
+            caveat += <<~EOS
 
 
                 The #{desc} is built for Intel macOS and so requires Rosetta 2 to be installed.
@@ -23,6 +23,7 @@ class Azd < Formula
                 Note that it is very difficult to remove Rosetta 2 once it is installed.
             EOS
         end
+        caveat
     end
 
     def install
