@@ -1,9 +1,9 @@
 class Azd < Formula
   desc "Azure Developer CLI"
   homepage "https://github.com/azure/azure-dev"
-  url "https://github.com/Azure/azure-dev/releases/download/azure-dev-cli_0.8.0-beta.1/azd-darwin-amd64.zip"
-  version "0.8.0-beta.1"
-  sha256 "8dfd228e7981f2f82e0de013ed6667e02a6cbb3ddedee784ad78f90633a29f05"
+  url "https://github.com/Azure/azure-dev/releases/download/azure-dev-cli_0.8.0-beta.2/azd-darwin-amd64.zip"
+  version "0.8.0-beta.2"
+  sha256 "88cf47d938731a064865f27f3da838ec846d236eb6e56505cdb411ec0d1733b4"
   license "MIT"
 
   def install
