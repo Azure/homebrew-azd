@@ -1,13 +1,14 @@
 class Azd < Formula
   desc "Azure Developer CLI"
   homepage "https://github.com/azure/azure-dev"
-  url "https://github.com/Azure/azure-dev/releases/download/azure-dev-cli_0.8.0-beta.2/azd-darwin-amd64.zip"
-  version "0.8.0-beta.2"
-  sha256 "88cf47d938731a064865f27f3da838ec846d236eb6e56505cdb411ec0d1733b4"
+  url "https://github.com/Azure/azure-dev/releases/download/azure-dev-cli_0.9.0-beta.1/azd-darwin-amd64.zip"
+  version "0.9.0-beta.1"
+  sha256 "c3b4b5989ca11ea1068897b2174c46ec9ec6d0ec8a8ffdb1d89f844a53d5ba25"
   license "MIT"
 
   def install
     bin.install "azd-darwin-amd64" => "azd"
+    (bin/".installed-by.txt").write "brew"
   end
 
   def caveats
