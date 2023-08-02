@@ -1,5 +1,9 @@
 # Homebrew Tap for Azure Developer CLI
 
+## Report an issue
+
+If you encounter issues with this tap, [open an issue in the main Azure Developer CLI repo](https://github.com/Azure/azure-dev/issues/new/choose) for faster response and to ensure that your issue receives attention.
+
 ## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
