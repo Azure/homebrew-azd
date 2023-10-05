@@ -1,13 +1,26 @@
 class Azd < Formula
   desc "Azure Developer CLI"
   homepage "https://github.com/azure/azure-dev"
-  url "https://github.com/Azure/azure-dev/releases/download/azure-dev-cli_1.3.1/azd-darwin-amd64.zip"
-  version "1.3.1"
-  sha256 "f35925011c7d1cc28e466c29de356af0933de93fbc0d42360d861ed4bd645768"
+  
+  if Hardware::CPU.intel?
+    url "https://github.com/Azure/azure-dev/releases/download/azure-dev-cli_1.4.0/azd-darwin-amd64.zip"
+    sha256 "255e99b1602ebaa286cf4c25c8f3bc1058a7a9338d725f88281a6c0e57d04a47"
+  elsif Hardware::CPU.arm?
+    url "https://github.com/Azure/azure-dev/releases/download/azure-dev-cli_1.4.0/azd-darwin-arm64.zip"
+    sha256 "502d848ea59702461a2db1574cccd3af2b9587a691282a00afb8baa34e0ba197"
+  end
+
+  version "1.4.0"
+  
   license "MIT"
 
   def install
-    bin.install "azd-darwin-amd64" => "azd"
+    if Hardware::CPU.intel?
+      bin.install "azd-darwin-amd64" => "azd"
+    elsif Hardware::CPU.arm?
+      bin.install "azd-darwin-arm64" => "azd"
+    end
+
     (bin/".installed-by.txt").write "brew"
   end
 
@@ -24,15 +37,6 @@ class Azd < Formula
       To remove such binaries from your home directory, run 'rm -rf ~/.azd/bin'.
 
     EOS
-    on_arm do
-      caveat += <<~EOS
-
-        The #{desc} is built for Intel macOS and so requires Rosetta 2 to be installed.
-        You can install Rosetta 2 with:
-          softwareupdate --install-rosetta
-        Note that it is very difficult to remove Rosetta 2 once it is installed.
-      EOS
-    end
     caveat
   end
 
