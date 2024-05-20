@@ -3,14 +3,14 @@ class Azd < Formula
   homepage "https://github.com/azure/azure-dev"
   
   if Hardware::CPU.intel?
-    url "https://github.com/Azure/azure-dev/releases/download/azure-dev-cli_1.9.2/azd-darwin-amd64.zip"
-    sha256 "7b933c06f6ad5e6456dd26ccaab8fc88ac544d43b1c610b799aeb2ba0a36bedf"
+    url "https://github.com/Azure/azure-dev/releases/download/azure-dev-cli_1.9.3/azd-darwin-amd64.zip"
+    sha256 "49435bbf044d5e6b0948b2af36f45dbe4b04b7928b329aef7dc9bcb1ee50ef5c"
   elsif Hardware::CPU.arm?
-    url "https://github.com/Azure/azure-dev/releases/download/azure-dev-cli_1.9.2/azd-darwin-arm64.zip"
-    sha256 "1953868b5b8517b02e0f61a03203c644cdf979d5d48024ec545b42462e14de91"
+    url "https://github.com/Azure/azure-dev/releases/download/azure-dev-cli_1.9.3/azd-darwin-arm64.zip"
+    sha256 "bb522fbb9b7d3e2bb1c82aa81911b66a954246e167bb0f57250aae6f0bebf370"
   end
 
-  version "1.9.2"
+  version "1.9.3"
   
   license "MIT"
 
