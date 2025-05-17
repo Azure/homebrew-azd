@@ -2,12 +2,22 @@ class Azd < Formula
   desc "Azure Developer CLI"
   homepage "https://github.com/azure/azure-dev"
   
-  if Hardware::CPU.intel?
-    url "https://github.com/Azure/azure-dev/releases/download/azure-dev-cli_1.16.1/azd-darwin-amd64.zip"
-    sha256 "face6a535278896ba43fe9d6a2898cdab1e5337ebd5384767af86f47a09a59aa"
-  elsif Hardware::CPU.arm?
-    url "https://github.com/Azure/azure-dev/releases/download/azure-dev-cli_1.16.1/azd-darwin-arm64.zip"
-    sha256 "a9a42a8421ffbef043ec9cec5571c482fd388c04f9283c243f7b05078ac9e3e9"
+  if OS.mac?
+    if Hardware::CPU.intel?
+      url "https://github.com/Azure/azure-dev/releases/download/azure-dev-cli_1.16.1/azd-darwin-amd64.zip"
+      sha256 "face6a535278896ba43fe9d6a2898cdab1e5337ebd5384767af86f47a09a59aa"
+    elsif Hardware::CPU.arm?
+      url "https://github.com/Azure/azure-dev/releases/download/azure-dev-cli_1.16.1/azd-darwin-arm64.zip"
+      sha256 "a9a42a8421ffbef043ec9cec5571c482fd388c04f9283c243f7b05078ac9e3e9"
+    end
+  elsif OS.linux?
+    if Hardware::CPU.intel?
+      url "https://github.com/Azure/azure-dev/releases/download/azure-dev-cli_1.16.1/azd-linux-amd64.tar.gz"
+      sha256 "37e7f3d0bce5022c3db96132e58155c84f9b18dbc905d44d6f5dedfd9a8bb71d"
+    elsif Hardware::CPU.arm?
+      url "https://github.com/Azure/azure-dev/releases/download/azure-dev-cli_1.16.1/azd-linux-arm64.tar.gz"
+      sha256 "a6cac0c07299d0b726f600a0abf0a58b7a789377c156e2ffd7007c8f01e97c95"
+    end
   end
 
   version "1.16.1"
@@ -15,10 +25,18 @@ class Azd < Formula
   license "MIT"
 
   def install
-    if Hardware::CPU.intel?
-      bin.install "azd-darwin-amd64" => "azd"
-    elsif Hardware::CPU.arm?
-      bin.install "azd-darwin-arm64" => "azd"
+    if OS.mac?
+      if Hardware::CPU.intel?
+        bin.install "azd-darwin-amd64" => "azd"
+      elsif Hardware::CPU.arm?
+        bin.install "azd-darwin-arm64" => "azd"
+      end
+    elsif OS.linux?
+      if Hardware::CPU.intel?
+        bin.install "azd-linux-amd64" => "azd"
+      elsif Hardware::CPU.arm?
+        bin.install "azd-linux-arm64" => "azd"
+      end
     end
 
     (bin/".installed-by.txt").write "brew"
