@@ -1,26 +1,26 @@
-class AzdATPrerelease < Formula
+class AzdATDaily < Formula
   desc "Azure Developer CLI"
   homepage "https://github.com/azure/azure-dev"
   
   if OS.mac?
     if Hardware::CPU.intel?
-      url "https://azuresdkartifacts.z5.web.core.windows.net/azd/standalone/daily/archive/1.24.0-beta.1-daily.6000022/azd-darwin-amd64.zip"
-      sha256 "66da7e57712cf749041ebf4dc1d07a2e71392535450f0a2b8e289d36137f0340"
+      url "https://azuresdkartifacts.z5.web.core.windows.net/azd/standalone/daily/archive/1.24.0-beta.1-daily.6001542/azd-darwin-amd64.zip"
+      sha256 "fbd990fb77b39ff1957e5b779806970970b8cccd916a89290db2c2dcccf36c09"
     elsif Hardware::CPU.arm?
-      url "https://azuresdkartifacts.z5.web.core.windows.net/azd/standalone/daily/archive/1.24.0-beta.1-daily.6000022/azd-darwin-arm64.zip"
-      sha256 "a67ffe8297c4fc351b8b4d8e12428e1e9d8fc2503ea63daac53c35f4594204be"
+      url "https://azuresdkartifacts.z5.web.core.windows.net/azd/standalone/daily/archive/1.24.0-beta.1-daily.6001542/azd-darwin-arm64.zip"
+      sha256 "6e06f31ad9489e4bd00fa86c486397ade3643aaae5cf882c10d282d81dd54b5f"
     end
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://azuresdkartifacts.z5.web.core.windows.net/azd/standalone/daily/archive/1.24.0-beta.1-daily.6000022/azd-linux-amd64.tar.gz"
-      sha256 "151375deb485cca7e0a6f1e512dcf13bbf62447b8203636043a940ff1d68bab1"
+      url "https://azuresdkartifacts.z5.web.core.windows.net/azd/standalone/daily/archive/1.24.0-beta.1-daily.6001542/azd-linux-amd64.tar.gz"
+      sha256 "01f8c9a6dbf9a9986a7054e8bc1e987ecb2055c409caf7a185434dbcf1dc616d"
     elsif Hardware::CPU.arm?
-      url "https://azuresdkartifacts.z5.web.core.windows.net/azd/standalone/daily/archive/1.24.0-beta.1-daily.6000022/azd-linux-arm64.tar.gz"
-      sha256 "fc292276ebf6382f2886740843b07fcf70aa97f5fca3e6607383faddbc395531"
+      url "https://azuresdkartifacts.z5.web.core.windows.net/azd/standalone/daily/archive/1.24.0-beta.1-daily.6001542/azd-linux-arm64.tar.gz"
+      sha256 "5a5ce8d2b76898c4a69f56bca01803f1c40eec059bed1c2a0f78853850092425"
     end
   end
 
-  version "1.24.0-beta.1-daily.6000022"
+  version "1.24.0-beta.1-daily.6001542"
   
   license "MIT"
 
