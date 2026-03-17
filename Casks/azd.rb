@@ -1,12 +1,12 @@
 cask "azd" do
   arch arm: "arm64", intel: "amd64"
 
-  version "1.23.9"
+  version "1.23.10"
 
-  sha256 arm: "4f68c0b6110141256efd579fd73193d432ce489ae6d193210fdefbb15e1ff983",
-         intel: "19a09c591510f793f2edc64bf259da8f9499357325816b6805446a222a0bc1ac",
-         arm64_linux: "c32d489ac550fdfa7c7f94c1296ff5a8f94e2981f8e6af31e7061846acc0bfb6",
-         x86_64_linux: "f3776d0510e0d1319cf8ab0dba1762873987639eee1b9834dae189f5208fa752"
+  sha256 arm: "8b2daaa0a27e38f9bc71ec2ff74a1d96f82ba1cd89d979acbe7be23164f57bd3",
+         intel: "eb28b6c80db34dbd95682f750eadfcb9638347ccca7a4fa06d0d1006819aa22d",
+         arm64_linux: "1daf11e6946c0fdf8dd2c2978f3584db49ea020025923bfbb2ab17165b1337d0",
+         x86_64_linux: "f896f6da681ce4ae2e03715edebc2b5b105e5c03a67094caf9847ebf4d135208"
 
   # File extension differs between mac (.zip) and linux (.tar.gz)
   on_macos do
@@ -43,3 +43,4 @@ cask "azd" do
     To remove such binaries from your home directory, run 'rm -rf ~/.azd/bin'.
   EOS
 end
+
