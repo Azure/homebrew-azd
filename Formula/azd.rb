@@ -4,23 +4,23 @@ class Azd < Formula
   
   if OS.mac?
     if Hardware::CPU.intel?
-      url "https://github.com/Azure/azure-dev/releases/download/azure-dev-cli_1.33.0/azd-darwin-amd64.zip"
-      sha256 "d5dac00978a9a59e51bd977a33f916bd217c181d0d7b967663cf639085470da2"
+      url "https://github.com/Azure/azure-dev/releases/download/azure-dev-cli_1.34.0/azd-darwin-amd64.zip"
+      sha256 "161e8e1e5772cdf9711eda11dde4bf385e19e0cf3eb274acdbb003d6401b65ae"
     elsif Hardware::CPU.arm?
-      url "https://github.com/Azure/azure-dev/releases/download/azure-dev-cli_1.33.0/azd-darwin-arm64.zip"
-      sha256 "78da4c8c52ef5c77c20315973f44faab53d12ed429f9ec166963f1f05bddc68f"
+      url "https://github.com/Azure/azure-dev/releases/download/azure-dev-cli_1.34.0/azd-darwin-arm64.zip"
+      sha256 "7beba7d339fc2c025cb4f46c8b2a89ac0af6ca2023cca7bfba80eff85bfe5d86"
     end
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/Azure/azure-dev/releases/download/azure-dev-cli_1.33.0/azd-linux-amd64.tar.gz"
-      sha256 "8e3abba664ff414b90bff4fcf885ab53e0d8909856d9bd96b6aee8ba9598b82c"
+      url "https://github.com/Azure/azure-dev/releases/download/azure-dev-cli_1.34.0/azd-linux-amd64.tar.gz"
+      sha256 "ac7a6a8c47b0fae1d6ad17defd2f6b4ad8b7a97c4ef6ed52aa2cea2cee5d7144"
     elsif Hardware::CPU.arm?
-      url "https://github.com/Azure/azure-dev/releases/download/azure-dev-cli_1.33.0/azd-linux-arm64.tar.gz"
-      sha256 "107aacd5d1f0d5e6d1d6f4e519dc16e615aeff82d334367473d92dcdc7886695"
+      url "https://github.com/Azure/azure-dev/releases/download/azure-dev-cli_1.34.0/azd-linux-arm64.tar.gz"
+      sha256 "a877d86ab362807df61fd8c98d2b7b7def186d7dd6f1390da3dfe25dcc8431fe"
     end
   end
 
-  version "1.33.0"
+  version "1.34.0"
   
   license "MIT"
 
