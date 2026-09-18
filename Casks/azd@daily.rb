@@ -1,12 +1,12 @@
 cask "azd@daily" do
   arch arm: "arm64", intel: "amd64"
 
-  version "1.35.0-beta.1-daily.6856018"
+  version "1.35.0-beta.1-daily.6856793"
 
-  sha256 arm: "b4f025e615cbdb411ce4def59ef9438dc1b84a540bb8aedd78e332914bba6e63",
-         intel: "d14a68e263d5bc4b45f837f2914fe902861d99d63d37ea7d8e922a8616b02d1c",
-         arm64_linux: "7d086816b6781f9e5011862f5376450db83b0a3bcb51716791465c7a242524f4",
-         x86_64_linux: "514d2a97d9b2cc0e371cbb7e8dfae6271b74da64aaa53c1f31efcf0a1e84ada0"
+  sha256 arm: "d283322e03abf871977a7669c328505c3bdc6e93c55e7f4997bdfdaa7f3f2bc3",
+         intel: "dc447d29142d533bda47989c09947298b972c796f88717c0c70b4e3df12caae6",
+         arm64_linux: "8955d9c85661935b22442788575d2d3804e2cbd1180ab9872db0ce5161ea2e56",
+         x86_64_linux: "fde64fcae76a62b8f229b5a6a691d9e7466122a4552935378d61d4894902bf14"
 
   # File extension differs between mac (.zip) and linux (.tar.gz)
   on_macos do
@@ -30,9 +30,9 @@ cask "azd@daily" do
 
   conflicts_with cask: "azd"
 
-  postflight do
+  postflight_steps do
     # Set .installed-by.txt to "brew" to configure azd behavior for homebrew-managed installs
-    File.write("#{staged_path}/.installed-by.txt", "brew")
+    write_file ".installed-by.txt", "brew"
   end
 
   caveats <<~EOS
