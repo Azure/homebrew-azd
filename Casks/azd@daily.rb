@@ -1,12 +1,12 @@
 cask "azd@daily" do
   arch arm: "arm64", intel: "amd64"
 
-  version "1.36.0-beta.1-daily.6939233"
+  version "1.36.0-beta.1-daily.6941657"
 
-  sha256 arm: "f3b351e7c67779bc8ce4ecb9557220661cf1350338ec8762e9c230146eb7ccc7",
-         intel: "54c2589821b77a0015d3e82ea36b0b6cb09315ed157f969fdbdc55df786e6823",
-         arm64_linux: "334950cb600f339ecdadd51b580cbce562906d8a271c9c5d27738357bd403e90",
-         x86_64_linux: "82d9f8328f0cde7c51685e0df6d425a7dba8d7de07dcd64463da2d9919690a2e"
+  sha256 arm: "2f5d01d387c263de3a1af8b9c09aa7fc29790b764580c2e65bf040406db1f91f",
+         intel: "a60561cdff53bb7473db5ba63aa61f4a8ddddb8ad6f75836af3de89f7ffe12bb",
+         arm64_linux: "21cfc82112bc3ab1e2c09d44f95d1192ce8ed2e92427819aa8248b9cc56140d8",
+         x86_64_linux: "19d9c1973aa50fc04a60589cad5198958b4b3d458f877cafc3363bb496dbd49a"
 
   # File extension differs between mac (.zip) and linux (.tar.gz)
   on_macos do
